@@ -1,0 +1,13 @@
+---
+layout: post
+title: "2013年书单"
+date: 2013-03-31 19:07:42 +0800
+comments: true
+categories: book
+---
+###技术类
+1.软件架构师的12项修炼
+2.企业级iOS应用开发实战
+3.测试驱动的iOS开发
+4.iOS的设计模式
+5.程序源的数学
