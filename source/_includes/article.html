@@ -1,7 +1,7 @@
 {% unless page.no_header %}
   <header>
     {% if index %}
-      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+      <h1 class="entry-title"><a style="text-decoration:none" href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% endif %}
@@ -13,7 +13,7 @@
              data-disqus-identifier="{% if post.meta.disqus_id %}{{ post.meta.disqus_id }}{% else %}{{ site.url }}{{ post.url }}{% endif %}">Comments</a>
         {% endif %}
         {% if site.duoshuo_short_name and page.comments != false and post.comments != false and site.duoshuo_comments == true %}
-          | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#comments">Comments</a>
+          | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#comments">评论</a>
          {% endif %}
       </p>
     {% endunless %}

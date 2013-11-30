@@ -3,6 +3,6 @@ layout: post
 title: "面对感情"
 date: 2013-09-04 00:27:55 +0800
 comments: true
-categories: 
+categories: 感触
 ---
 我不知道我自己现在面对的是不是真爱，但是我希望自己可以真诚的面对，不要逃避。不管结果怎样，这次我不希望自己后悔！
