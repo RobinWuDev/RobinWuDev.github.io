@@ -8,7 +8,7 @@ categories: go
 Golang方法的自动转换
 
 在go语言中会自动根据下面这个方法  
-``` go linenos:true
+``` go 
 func (a Integer) Less(b Integer) bool
 ```  
 自动生成下面的这个方法  
@@ -17,14 +17,14 @@ func (a *Integer) Less(b Integer) bool
 ```  
 
 所以如果有一个借口定义为这样  
-``` go linenos:true 
+``` go  
 type LessAdder interface {
 	Less(b Integer) bool
 }
 ```  
 
 而类型定义为这样  
-``` go linenos:true
+``` go
 type Integer int
 
 func (a Integer) Less(b Integer) bool {
@@ -34,7 +34,7 @@ func (a Integer) Less(b Integer) bool {
 就可以直接说Integer实现了接口LessAdder
 
 可以直接赋值  
-``` go linenos:true
+``` go
  var a Integer = 1
   var b LessAdder = a
 ```
