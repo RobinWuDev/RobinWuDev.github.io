@@ -8,24 +8,33 @@ categories: go
 Golang方法的自动转换
 
 在go语言中会自动根据下面这个方法  
-`func (a Integer) Less(b Integer) bool`  
+``` go linenos:true
+func (a Integer) Less(b Integer) bool
+```  
 自动生成下面的这个方法  
-`func (a *Integer) Less(b Integer) bool`  
+``` go linenos:true
+func (a *Integer) Less(b Integer) bool
+```  
 
 所以如果有一个借口定义为这样  
-`type LessAdder interface {
+``` go linenos:true 
+type LessAdder interface {
 	Less(b Integer) bool
-}`  
+}
+```  
+
 而类型定义为这样  
-`type Integer int
+``` go linenos:true
+type Integer int
 
 func (a Integer) Less(b Integer) bool {
 	return a < b
 }
-`  
+```
 就可以直接说Integer实现了接口LessAdder
 
 可以直接赋值  
-` var a Integer = 1
+``` go linenos:true
+ var a Integer = 1
   var b LessAdder = a
-`
+```
