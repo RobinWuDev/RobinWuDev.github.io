@@ -14,7 +14,7 @@ func (a Integer) Less(b Integer) bool
 自动生成下面的这个方法  
 ``` go linenos:true
 func (a *Integer) Less(b Integer) bool
-```  
+```  <!-- more -->
 
 所以如果有一个借口定义为这样  
 ``` go  
