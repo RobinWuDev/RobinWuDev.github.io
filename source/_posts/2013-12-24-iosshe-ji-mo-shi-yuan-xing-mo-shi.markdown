@@ -54,4 +54,4 @@ DDCommand类已经具有深复制的功能了，我们下面开始使用。
     command2.text = @"command2";
     
 ```
-[demo](/download/20131224.zip)
+<a href="/download/20131224.zip">demo</a>
