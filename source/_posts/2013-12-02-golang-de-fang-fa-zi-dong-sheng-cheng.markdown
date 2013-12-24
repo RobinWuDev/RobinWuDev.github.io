@@ -12,7 +12,7 @@ Golang方法的自动转换
 func (a Integer) Less(b Integer) bool
 ```  
 自动生成下面的这个方法  
-``` go linenos:true
+``` go
 func (a *Integer) Less(b Integer) bool
 ```  <!-- more -->
 

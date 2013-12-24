@@ -17,7 +17,7 @@ categories: 设计模式
 
 首先iOS协议里面有个*NSCoping*协议，想让创建的实例支持深复制，该实例的类需要实现这个协议，并实现该协议的```- (id)copyWithZone:(NSZone *)zone```方法。
 
-``` objective-c linenos:true
+``` objective-c
 
 #import <Foundation/Foundation.h>
 
@@ -28,7 +28,7 @@ categories: 设计模式
 
 ```
 
-``` objective-c linenos:true
+``` objective-c
 
 #import "DDCommand.h"
 
@@ -46,7 +46,7 @@ categories: 设计模式
 
 DDCommand类已经具有深复制的功能了，我们下面开始使用。
 
-``` objective-c linenos:true
+``` objective-c
 
 	 DDCommand *command1 = [[DDCommand alloc]init];
     command1.text = @"command1";
