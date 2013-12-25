@@ -10,5 +10,5 @@ categories: 感触
 生活如履薄冰，有时候我觉得自己还年轻，应该出去闯闯，但是很多时候自己不敢出去，没办法出去，因为我自己也自己找了很多责任，自己本身也有很多义务，无论是家里还是其他的。或许我的虚荣心很强吧，总是希望出风头，但是对我还是平静的生活才是最适合的，我现在确实有些害怕改变了，但是改变又是不能避免的。  
 就像是我现在写这个文章，我也以为我可以明白自己在什么，但是我看到了，我现在完全不知道自己在干什么，有些害怕了。生活的路难走啊。
 
-<audio src="/musics/男人哭吧不是罪.mp3" controls="controls" autoplay="autoplay">
+<audio src="/blogFiles/musics/男人哭吧不是罪.mp3" controls="controls" autoplay="autoplay">
 </audio>
