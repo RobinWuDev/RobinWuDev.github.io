@@ -7,7 +7,7 @@ categories: iOS
 ---    
 最近应用工作需要，用到的字体都是系统的其他字体，所以特意将iOS的字体都打印出来，放在这里，方便以后查看。        
     
-    
+<!-- more -->
     
 ###Family Name:Thonburi    
     
