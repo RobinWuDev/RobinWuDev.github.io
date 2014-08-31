@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "@有些忧伤"
+title: "有些忧伤"
 date: 2014-08-29 10:22:24 +0800
 comments: true
 categories: "感触"
