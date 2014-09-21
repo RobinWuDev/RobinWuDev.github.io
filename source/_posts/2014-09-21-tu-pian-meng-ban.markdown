@@ -122,21 +122,23 @@ demo的下载地址:[MaskDemo2](/blogFiles/download/20140921_2.zip)
 	    
 	    CALayer *layer = [CALayer layer];
 	    layer.contents = (id)[image CGImage];
+	    layer.contentsCenter = CGRectMake(image.capInsets.left/image.size.width, image.capInsets.top/image.size.height, (image.size.width-image.capInsets.right-image.capInsets.left)/image.size.width, (image.size.height-image.capInsets.bottom-image.capInsets.top)/image.size.height);
 	    layer.frame = CGRectMake(0, 0, self.demoImageView.frame.size.width, self.demoImageView.frame.size.height);
+	    layer.contentsScale = [UIScreen mainScreen].scale;
 	    
 	    self.demoImageView.layer.mask = layer;
 	    self.demoImageView.layer.masksToBounds = YES;
 	}
+
 出来的效果:
 
 ![](/blogFiles/images/2014/09/maskDemo3_1.png)
 
-为什么跟第二种方法出来的效果是一样，因为mask图片没有没拉伸，并且用这种方法，mask图片中要显示的区域为黑色!
+1. mask图片黑色部分为显示区域
+2. `layer.contentsCenter`设置的是蒙版图片的拉伸区域在图片的区域比,这个是这个方法的价值所在，蒙版图片自动变大
+3. `layer.contentsScale = [UIScreen mainScreen].scale;`如果没有设置这个，图片讲采用一倍图，在retina屏幕上不能看
 
 demo的下载地址:[MaskDemo3](/blogFiles/download/20140921_3.zip)
 
-那这样还是无法完美的解决显示效果的问题。
-
-github上我发现了有个项目可以实现图片拉伸，[地址](https://github.com/molon/MLIgnoreTransparentButton)，可以参考下!
 
 参考:[UIImage 和 CALayer 的遮罩](http://blog.sina.com.cn/s/blog_611f76750101er4z.html)
