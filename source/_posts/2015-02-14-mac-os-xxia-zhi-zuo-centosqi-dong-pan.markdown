@@ -11,7 +11,7 @@ categories: 其他
 
 1.使用Disk Util 格式化USB驱动盘
 ![](/blogFiles/images/2015/02/14/step1.png)
-![](/blogFiles/images/2015/02/14/step1.png)
+![](/blogFiles/images/2015/02/14/step2.png)
 2.将ISO文件转化为IMG文件
     
     hdiutil convert -format UDRW -o CentOS-7.0-1406-x86_64-DVD.dmg CentOS-7.0-1406-x86_64-DVD.iso
