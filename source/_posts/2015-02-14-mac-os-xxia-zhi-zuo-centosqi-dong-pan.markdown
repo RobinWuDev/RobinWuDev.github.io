@@ -22,8 +22,8 @@ categories: 其他
 
 4.卸载USB盘  
 
-    diskutil unmount /dev/disk2s2
+    diskutil unmountDisk /dev/disk2
 
 5.开始创建启动盘
 
-    sudo dd if=CentOS-7.0-1406-x86_64-DVD.dmg of=/dev/disk2s2 bs=1m
+    sudo dd if=CentOS-7.0-1406-x86_64-DVD.dmg of=/dev/disk2 bs=1m
