@@ -37,5 +37,5 @@ categories: 观后感
 
 没有人是完美的，我们不应该总是看到自己的不够好，我也要看到自己够好的一面。当我看到自己够好的一面，我就应该告诉自己：“不必自卑，因为我已经够好了”。     
 
-或许看完一本书，我也无法彻底的摆脱的自卑，但是我可以减少自卑对自己的影响，或者叫做自卑恢复力。感谢这本书《我已经够好了》](http://www.amazon.cn/gp/product/B00Q3VD8D6/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00Q3VD8D6&linkCode=as2&tag=robinwu-23)。
+或许看完一本书，我也无法彻底的摆脱的自卑，但是我可以减少自卑对自己的影响，或者叫做自卑恢复力。感谢这本书[《我已经够好了》](http://www.amazon.cn/gp/product/B00Q3VD8D6/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00Q3VD8D6&linkCode=as2&tag=robinwu-23)。
 
