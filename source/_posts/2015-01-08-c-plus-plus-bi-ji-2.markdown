@@ -31,4 +31,4 @@ categories: C++
 3. 字面值类型指的就是那些简单的类型，算数类型，引用，指针。
 
 ps:我真的很不明白constexpr有什么用。。或许后面就知道，我自己还是太low了。
-部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)
+部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)

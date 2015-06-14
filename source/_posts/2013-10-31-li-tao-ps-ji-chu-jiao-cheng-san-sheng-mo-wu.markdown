@@ -5,7 +5,7 @@ date: 2013-10-31 22:42:51 +0800
 comments: true
 categories: 笔记
 ---
-因为要给自己的app弄UI，所以特意去找了一部PS教程[《李涛PS基础教程》](http://www.amazon.cn/gp/product/B00A63GKKA/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00A63GKKA&linkCode=as2&tag=robinwu-23)来看，不看不知道，看了吓一跳啊，里面的一些概念和想法，确实让我茅塞顿开。
+因为要给自己的app弄UI，所以特意去找了一部PS教程[《李涛PS基础教程》](http://www.amazon.cn/gp/product/B00A63GKKA/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00A63GKKA&linkCode=as2&tag=robinwu-23)来看，不看不知道，看了吓一跳啊，里面的一些概念和想法，确实让我茅塞顿开。
 
 颜色三属性：色相，饱和度，明度。  
 光的三原色：红，蓝，绿。  
@@ -15,4 +15,4 @@ categories: 笔记
 
 是不是很有趣，等我将图片功能加上去，大家就会更明白了，大家也可以去看《李涛PS基本教程》，绝对会受益匪浅，不管大家想不想学PS，真心的。
 
-因为《李涛PS基本教程》是一个视频教程，他也有一本书，[《数字艺术设计精品规划教材:Photoshop CS5中文版案例教程(附教学光盘)》](http://www.amazon.cn/gp/product/B00A63GKKA/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00A63GKKA&linkCode=as2&tag=robinwu-23)的光盘也有相应的视频。
+因为《李涛PS基本教程》是一个视频教程，他也有一本书，[《数字艺术设计精品规划教材:Photoshop CS5中文版案例教程(附教学光盘)》](http://www.amazon.cn/gp/product/B00A63GKKA/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00A63GKKA&linkCode=as2&tag=robinwu-23)的光盘也有相应的视频。

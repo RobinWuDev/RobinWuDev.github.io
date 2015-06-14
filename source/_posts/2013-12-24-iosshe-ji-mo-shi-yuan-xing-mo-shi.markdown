@@ -6,7 +6,7 @@ comments: true
 categories: 设计模式
 ---
 
-**原型模式:** 使用原型实例创建对象的种类，并通过复制这个原型创建新的对象。 --最早定义于[《设计模式》](http://www.amazon.cn/gp/product/B001130JN8/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B001130JN8&linkCode=as2&tag=robinwu-23)
+**原型模式:** 使用原型实例创建对象的种类，并通过复制这个原型创建新的对象。 --最早定义于[《设计模式》](http://www.amazon.cn/gp/product/B001130JN8/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B001130JN8&linkCode=as2&tag=robinwu-23)
 
 <!-- more -->
 上面是原型模式的的定义，在我看来原型模式就是复制模式，根据一个已有的实例复制出另外一个实例，被复制的那个实例就原型，所以才被叫做原型模式。

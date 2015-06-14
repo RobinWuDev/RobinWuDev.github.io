@@ -5,7 +5,7 @@ date: 2013-10-22 23:31:23 +0800
 comments: true
 categories: 读后感
 ---
-刚看完[《Don\'t Make Me Think》](http://www.amazon.cn/gp/product/B00QGA04RM/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00QGA04RM&linkCode=as2&tag=robinwu-23)，说实话，我不是很习惯外国人说话的方式，即使翻译后也是， 因为译者在翻译的同时，也是基于外国人的语气进行翻译的。
+刚看完[《Don\'t Make Me Think》](http://www.amazon.cn/gp/product/B00QGA04RM/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00QGA04RM&linkCode=as2&tag=robinwu-23)，说实话，我不是很习惯外国人说话的方式，即使翻译后也是， 因为译者在翻译的同时，也是基于外国人的语气进行翻译的。
 
 不过不能否认的，这本书确实是一本好书，设计不是一个很容易的事，作为一名开发者，了解设计是一门必修课，这样会让我们在开发的同时注意到一些问题，让我们做出来的东西更好的。<!-- more -->
 

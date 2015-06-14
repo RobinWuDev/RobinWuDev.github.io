@@ -5,7 +5,7 @@ date: 2013-10-09 23:41:11 +0800
 comments: true
 categories: 读后感
 ---
-这两天把[《高效能程序员的修炼》](http://www.amazon.cn/gp/product/B00DXZFZPO/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00DXZFZPO&linkCode=as2&tag=robinwu-23)这本书看完了，作者Jeff Jtwood是一个知名的技术博客作家，也是Stack Overflow的创始人。<!-- more -->
+这两天把[《高效能程序员的修炼》](http://www.amazon.cn/gp/product/B00DXZFZPO/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00DXZFZPO&linkCode=as2&tag=robinwu-23)这本书看完了，作者Jeff Jtwood是一个知名的技术博客作家，也是Stack Overflow的创始人。<!-- more -->
  
 看了这本书，很难想象一个程序员的文笔能这么好，可能跟他的观点有关系了，他推崇写作，写作可以让人把思路理清，并且养成良好的沟通技巧，这点很容易理解，因为写一篇文章首先需要将思路理清楚，然后才能写出比较清晰的文章，与人沟通也是，如果自己都无法将思路理清，如果跟人沟通了。
 

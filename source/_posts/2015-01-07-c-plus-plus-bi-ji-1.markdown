@@ -28,4 +28,4 @@ categories: C++
 ###指向指针的引用
 `int *p;int int *&r = p`因为指针是对象，所以定义指针的引用。但是还是少用这个比较好，已我的脑子，看这种代码早晚会疯掉。
 
-部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)
+部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)
