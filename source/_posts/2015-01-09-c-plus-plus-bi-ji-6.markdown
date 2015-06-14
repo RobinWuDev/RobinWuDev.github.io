@@ -40,3 +40,6 @@ categories: C++
 	8. invalid_argument 逻辑错误: 无效参数
 	9. length_error 逻辑错误: 试图创建一个超出该类型最大长度的对象
 	10. out_of_range 逻辑错误: 使用一个超出有效范围的值
+
+
+部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)

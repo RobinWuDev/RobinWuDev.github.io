@@ -28,3 +28,4 @@ categories: C++
 		++d;
 
 写这样的代码感觉就是自己跟自己玩捉迷藏，最后所有的变量都是4
+部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)

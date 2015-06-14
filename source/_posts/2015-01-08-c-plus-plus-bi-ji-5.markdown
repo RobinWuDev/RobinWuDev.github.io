@@ -77,3 +77,5 @@ categories: C++
 
 ###多维数组
 1. 在对多维数组进行for循环时，要注意，除了最内层的循环外，其他所有循环的控制变量都应该是引用类型，如果不是引用类型，那么编译器会把该变量转换为该数组内首元素的指针，那么用一个指针去for循环是不对的,因为指针是没有迭代器的，而用了引用，相当于就是一个数组，而数组是有迭代器的，那么就可以进行迭代
+
+部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)

@@ -16,7 +16,7 @@ func (a Integer) Less(b Integer) bool
 func (a *Integer) Less(b Integer) bool
 ```  <!-- more -->
 
-所以如果有一个借口定义为这样  
+所以如果有一个接口定义为这样  
 ``` go  
 type LessAdder interface {
 	Less(b Integer) bool

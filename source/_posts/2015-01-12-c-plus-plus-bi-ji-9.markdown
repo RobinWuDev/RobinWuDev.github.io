@@ -42,4 +42,6 @@ categories: C++
 3. 那些只接受一个单一迭代器来表示第二个序列的算法，都假定第二个序列至少与第一个序列一样长
 4. `lambda`类似于闭包，不过只能使用捕获列表里的`lambda`所在函数里面的变量和函数外部的名字
 5. 当以引用捕获一个变量时，必须保证在lambda执行时变量是存在的。
-6. 
+
+
+部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)

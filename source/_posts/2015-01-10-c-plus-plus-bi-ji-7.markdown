@@ -84,5 +84,5 @@ categories: C++
 5. 使用decltype返回的是函数类型，需要在加`*`
 6. 定义指向函数的指针跟定义指向数组的指针方式一样，但是可读性上尽量使用类型别名或者尾置类型
 
-
+部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)
 

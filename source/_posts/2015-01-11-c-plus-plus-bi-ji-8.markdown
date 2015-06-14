@@ -41,3 +41,4 @@ categories: C++
 
 类这章的东西太细了，为什么C++这么难搞，因为他总是一分再分，把不同情况的类又去做特殊处理了。。什么聚合类呀，字面值常量类，就不能简单一点。
 
+部分文字来自[《C++ Primer》](http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_tf_tl?ie=UTF8&camp=536&creative=3200&creativeASIN=B00ESUIL0O&linkCode=as2&tag=robinwu-23)
