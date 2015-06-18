@@ -3,7 +3,7 @@ layout: post
 title: "我是自卑的"
 date: 2015-06-14 16:41:03 +0800
 comments: true
-categories: 观后感
+categories: 读书笔记
 ---
 没有人愿意承认自己不够好。<!--more-->
 

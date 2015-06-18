@@ -3,7 +3,7 @@ layout: post
 title: "《李涛PS基础教程》第一章"
 date: 2013-11-04 22:08:30 +0800
 comments: true
-categories: 笔记 
+categories: 读书笔记 
 ---
 1. 创意的思维类型
 	1. 抽象思维

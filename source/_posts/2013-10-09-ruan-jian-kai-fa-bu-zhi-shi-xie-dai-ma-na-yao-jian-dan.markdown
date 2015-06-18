@@ -3,7 +3,7 @@ layout: post
 title: "软件开发不只是写代码那么简单"
 date: 2013-10-09 23:41:11 +0800
 comments: true
-categories: 读后感
+categories: 读书笔记
 ---
 这两天把[《高效能程序员的修炼》](http://www.amazon.cn/gp/product/B00DXZFZPO/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00DXZFZPO&linkCode=as2&tag=robinwu-23)这本书看完了，作者Jeff Jtwood是一个知名的技术博客作家，也是Stack Overflow的创始人。<!-- more -->
  

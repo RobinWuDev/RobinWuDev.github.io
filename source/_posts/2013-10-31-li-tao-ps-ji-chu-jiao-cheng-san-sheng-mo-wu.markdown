@@ -3,7 +3,7 @@ layout: post
 title: "《李涛PS基础教程》三生万物"
 date: 2013-10-31 22:42:51 +0800
 comments: true
-categories: 笔记
+categories: 读书笔记
 ---
 因为要给自己的app弄UI，所以特意去找了一部PS教程[《李涛PS基础教程》](http://www.amazon.cn/gp/product/B00A63GKKA/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00A63GKKA&linkCode=as2&tag=robinwu-23)来看，不看不知道，看了吓一跳啊，里面的一些概念和想法，确实让我茅塞顿开。
 

@@ -3,7 +3,7 @@ layout: post
 title: "新生"
 date: 2015-05-27 01:18:14 +0800
 comments: true
-categories: 感触
+categories: 读书笔记
 ---
 由于亚马逊搞活动，满300减100，我就买了一些个人管理和个人财务管理的书，但是对我影响最大的书应该是[《富爸爸穷爸爸》](http://www.amazon.cn/gp/product/B00H9XDUL2/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00H9XDUL2&linkCode=as2&tag=robinwu-23)，他帮我弄明白了我为什么是现在的这种情况。    
 <!--more-->

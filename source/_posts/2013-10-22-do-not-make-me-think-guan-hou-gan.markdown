@@ -3,7 +3,7 @@ layout: post
 title: "《Don't Make Me Think》观后感"
 date: 2013-10-22 23:31:23 +0800
 comments: true
-categories: 读后感
+categories: 读书笔记
 ---
 刚看完[《Don\'t Make Me Think》](http://www.amazon.cn/gp/product/B00QGA04RM/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00QGA04RM&linkCode=as2&tag=robinwu-23)，说实话，我不是很习惯外国人说话的方式，即使翻译后也是， 因为译者在翻译的同时，也是基于外国人的语气进行翻译的。
 
