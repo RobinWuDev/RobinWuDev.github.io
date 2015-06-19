@@ -5,7 +5,7 @@ date: 2015-06-18 22:27:45 +0800
 comments: true
 categories: 读书笔记
 ---
-在看完《万万没想到，用理工科思维理解世界》后，整个人都不一样了，至少我看世界的方式多了一个。<!--more-->
+在看完[《万万没想到，用理工科思维理解世界》](http://www.amazon.cn/gp/product/B00NUAKQGA/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00NUAKQGA&linkCode=as2&tag=robinwu-23)后，整个人都不一样了，至少我看世界的方式多了一个。<!--more-->
 
 我是一个程序员，我算是拥有理工科思维的人吗？    
 
@@ -29,15 +29,15 @@ categories: 读书笔记
 
 学习很重要，但是如何科学的学习呢？    
 
-    1. 刻意练习
-    2. 只在`学习区`练习
-    3. 掌握套路
-    4. 基本功
-    5. 重复练习
-    6. 高度针对性
-    7. 随时获得反馈
-    8. 单独学习
-    9. 兴趣
+1. 刻意练习
+2. 只在`学习区`练习
+3. 掌握套路
+4. 基本功
+5. 重复练习
+6. 高度针对性
+7. 随时获得反馈
+8. 单独学习
+9. 兴趣
 
 每个人都有想象力，但是如果我们什么都不知道，我们能想到什么？想象力是对我们已有知识的延伸。所以想象力是不自由的，只有我们的知识增加了，我们才能联想到更多东西。    
 
@@ -65,55 +65,55 @@ categories: 读书笔记
 
 我在开头问了一句，我是程序员，那么我拥有的理工科思维了吗？答案是不一定，在有些事情上，我还是容易感情用事。但是有些事情我却能很理性的对待。    
 
-《万万没想到，用理工科思维理解世界》的作者是一个物理科研人员，思维严谨，在书中提到了很多书，下面是对应的书目，不是推荐书目，好坏自评:
+[《万万没想到，用理工科思维理解世界》](http://www.amazon.cn/gp/product/B00NUAKQGA/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00NUAKQGA&linkCode=as2&tag=robinwu-23)的作者是一个物理科研人员，思维严谨，在书中提到了很多书，下面是对应的书目，不是推荐书目，好坏自评:
 
-    1. 《乡土中国》
-    2. 《思考，快与慢》
-    3. 《经济学人》
-    4. 《内医学年鉴》
-    5. 《时间简史》--霍金
-    6. 《大设计》-- 霍金
-    7. 《潜意识:控制你行为的秘密》
-    8. 《信息食谱》
-    9. 《大问题：简明哲学导论》
-    10. 《我们如何决策》
-    11. 《重来》
-    12. 《黑天鹅语录》
-    13. 《反常的自然科学》
-    14. 《走在人生边上》
-    15. 《原理》
-    16. 《可怕的对称》
-    17. 《谁赚走了你的薪水》
-    18. 《意志力》
-    19. 《决断2秒间》
-    20. 《大卫与歌利亚》
-    21. 《匹夫的逆袭》
-    22. 《引爆点》
-    23. 《异类》
-    24. 《哪来的天才》
-    25. 《天才的密码》
-    26. 《决策》
-    27. 《贝尔实验室和美国的创新时代》
-    28. 《不要当这样的科学家》
-    29. 《娱乐至死》
-    30. 《虎妈的战歌》
-    31. 《为万世英名而战》
-    32. 《哲学宝宝》
-    33. 《战争与和平》
-    34. 《浅薄》
-    35. 《达蜜经济学》
-    36. 《钱钟书手稿集》
-    37. 《卧底经济学》
-    38. 《如何阅读一本书》
-    39. 《公司的概念》
-    40. 《适应》
-    41. 《低智商社会》
-    42. 《夺魁者：关于输赢的科学》
-    43. 《超级人脉》
-    44. 《友谊的代价》
-    45. 《别闹了，费曼先生》
-    46. 《再冷门的问题也有最热闹的答案》
-    47. 《魔鬼出没的世界》
-    48. 《伤寒论》
-    49. 《费曼的彩虹》
-    50. 《怪诞行为学》
+1. [《乡土中国》](http://www.amazon.cn/gp/product/B001KC04FI/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B001KC04FI&linkCode=as2&tag=robinwu-23)
+2. [《思考，快与慢》](http://www.amazon.cn/gp/product/B0089IPN5W/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B0089IPN5W&linkCode=as2&tag=robinwu-23)
+3. [《经济学人》](http://www.amazon.cn/gp/product/B00KX2XJ8U/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00KX2XJ8U&linkCode=as2&tag=robinwu-23)
+4. 《内医学年鉴》
+5. [《时间简史》](http://www.amazon.cn/gp/product/B00116OR88/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00116OR88&linkCode=as2&tag=robinwu-23)
+6. [《大设计》](http://www.amazon.cn/gp/product/B004HW7ZZA/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B004HW7ZZA&linkCode=as2&tag=robinwu-23)
+7. [《潜意识:控制你行为的秘密》](http://www.amazon.cn/gp/product/B00DZEX5JQ/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00DZEX5JQ&linkCode=as2&tag=robinwu-23)
+8. 《信息食谱》
+9. [《大问题：简明哲学导论》](http://www.amazon.cn/gp/product/B00QF18280/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00QF18280&linkCode=as2&tag=robinwu-23)
+10. 《我们如何决策》
+11. [《重来》](http://www.amazon.cn/gp/product/B0048EKQS0/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B0048EKQS0&linkCode=as2&tag=robinwu-23)
+12. [《黑天鹅语录》](http://www.amazon.cn/gp/product/B008975I3K/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B008975I3K&linkCode=as2&tag=robinwu-23)
+13. 《反常的自然科学》
+14. [《走在人生边上》](http://www.amazon.cn/gp/product/B009S2ZO5M/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B009S2ZO5M&linkCode=as2&tag=robinwu-23)
+15. 《原理》
+16. [《可怕的对称》](http://www.amazon.cn/gp/product/B00GYLAD9C/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00GYLAD9C&linkCode=as2&tag=robinwu-23)
+17. 《谁赚走了你的薪水》
+18. [《意志力》](http://www.amazon.cn/gp/product/B008975JJS/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B008975JJS&linkCode=as2&tag=robinwu-23)
+19. [《决断2秒间》](http://www.amazon.cn/gp/product/B00JA4TFD0/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00JA4TFD0&linkCode=as2&tag=robinwu-23)
+20. [《大卫与歌利亚》](http://www.amazon.cn/gp/product/031625178X/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=031625178X&linkCode=as2&tag=robinwu-23)
+21. [《匹夫的逆袭》](http://www.amazon.cn/gp/product/B00LBXPWDU/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00LBXPWDU&linkCode=as2&tag=robinwu-23)
+22. [《引爆点》](http://www.amazon.cn/gp/product/B00U2DH5MQ/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00U2DH5MQ&linkCode=as2&tag=robinwu-23)
+23. [《异类》](http://www.amazon.cn/gp/product/B00JD436FA/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00JD436FA&linkCode=as2&tag=robinwu-23)
+24. 《哪来的天才》
+25. 《天才的密码》
+26. 《决策》
+27. 《贝尔实验室和美国的创新时代》
+28. 《不要当这样的科学家》
+29. [《娱乐至死》](http://www.amazon.cn/gp/product/B00W91JINS/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00W91JINS&linkCode=as2&tag=robinwu-23)
+30. 《虎妈的战歌》
+31. 《为万世英名而战》
+32. 《哲学宝宝》
+33. [《战争与和平》](http://www.amazon.cn/gp/product/B0011C2MXY/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B0011C2MXY&linkCode=as2&tag=robinwu-23)
+34. 《浅薄》
+35. 《达蜜经济学》
+36. [《钱钟书手稿集》](http://www.amazon.cn/gp/product/B005WN3B9W/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B005WN3B9W&linkCode=as2&tag=robinwu-23)
+37. [《卧底经济学》](http://www.amazon.cn/gp/product/B0047Y19MI/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B0047Y19MI&linkCode=as2&tag=robinwu-23)
+38. [《如何阅读一本书》](http://www.amazon.cn/gp/product/B00IX8NX5A/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00IX8NX5A&linkCode=as2&tag=robinwu-23)
+39. [《公司的概念》](http://www.amazon.cn/gp/product/B002Q0X414/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B002Q0X414&linkCode=as2&tag=robinwu-23)
+40. 《适应》
+41. [《低智商社会》](http://www.amazon.cn/gp/product/B003HGHRBY/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B003HGHRBY&linkCode=as2&tag=robinwu-23)
+42. 《夺魁者：关于输赢的科学》
+43. [《超级人脉》](http://www.amazon.cn/gp/product/B0087M5QO8/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B0087M5QO8&linkCode=as2&tag=robinwu-23)
+44. 《友谊的代价》
+45. [《别闹了，费曼先生》](http://www.amazon.cn/gp/product/B009QVEA8M/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B009QVEA8M&linkCode=as2&tag=robinwu-23)
+46. [《再冷门的问题也有最热闹的答案》](http://www.amazon.cn/gp/product/B009JAFCNM/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B009JAFCNM&linkCode=as2&tag=robinwu-23)
+47. [《魔鬼出没的世界》](http://www.amazon.cn/gp/product/B003L54AXE/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B003L54AXE&linkCode=as2&tag=robinwu-23)
+48. [《伤寒论》](http://www.amazon.cn/gp/product/B001174FAC/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B001174FAC&linkCode=as2&tag=robinwu-23)
+49. [《费曼的彩虹》](http://www.amazon.cn/gp/product/B009QVEA8M/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B009QVEA8M&linkCode=as2&tag=robinwu-23)
+50. [《怪诞行为学》](http://www.amazon.cn/gp/product/B0040NO84W/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B0040NO84W&linkCode=as2&tag=robinwu-23)
