@@ -1,0 +1,23 @@
+---
+layout: post
+title: "2014年书单"
+date: 2015-06-20 09:16:30 +0800
+comments: true
+categories: 书单
+---
+这是2014年的书单
+<!--more-->
+1. [《灰帽黑客:正义黑客的道德规范、渗透测试、攻击方法和漏洞分析技术(第3版)》](http://www.amazon.cn/gp/product/B009ZR5P2M/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B009ZR5P2M&linkCode=as2&tag=robinwu-23)
+2. [《Effective Objective C 2.0:编写高质量iOS与OS X代码的52个有效方法》](http://www.amazon.cn/gp/product/B00IDSGY06/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00IDSGY06&linkCode=as2&tag=robinwu-23)
+3. [《搞定3:平衡工作与生活的艺术》](http://www.amazon.cn/gp/product/B0075ZZBJ8/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B0075ZZBJ8&linkCode=as2&tag=robinwu-23)
+4. [《定位:有史以来对美国营销影响最大的观念》](http://www.amazon.cn/gp/product/B004IPRAOM/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B004IPRAOM&linkCode=as2&tag=robinwu-23)
+5. [《影响力(经典版):(风靡20年,最畅销社会心理学作品)》](http://www.amazon.cn/gp/product/B0044KME2E/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B0044KME2E&linkCode=as2&tag=robinwu-23)
+6. 《搞定1:无压工作的艺术》
+7. [《iOS应用逆向工程:分析与实战》](http://www.amazon.cn/gp/product/B00HQW9AA6/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00HQW9AA6&linkCode=as2&tag=robinwu-23)
+8. [《C++程序设计语言》](http://www.amazon.cn/gp/product/B003EIKI0C/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B003EIKI0C&linkCode=as2&tag=robinwu-23)
+9. [《新概念51单片机C语言教程：入门、提高、开发、拓展全攻略》](http://www.amazon.cn/gp/product/B00FIMWI14/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00FIMWI14&linkCode=as2&tag=robinwu-23)
+10. [《文明之光》](http://www.amazon.cn/gp/product/B00QIIBFQQ/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00QIIBFQQ&linkCode=as2&tag=robinwu-23)
+11. [《TCP/IP详解卷1:协议》](http://www.amazon.cn/gp/product/B00116OTVS/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00116OTVS&linkCode=as2&tag=robinwu-23)
+12. [《TCP/IP详解卷2:实现》](http://www.amazon.cn/gp/product/B002FB7KG4/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B002FB7KG4&linkCode=as2&tag=robinwu-23)
+13. [《TCP/IP详解卷3:TCP 事务协议、HTTP、NNTP和UNIX域协议》](http://www.amazon.cn/gp/product/B00XJ2L3RK/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00XJ2L3RK&linkCode=as2&tag=robinwu-23)
+14. [《iOS测试指南》](http://www.amazon.cn/gp/product/B00JPVNFKM/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B00JPVNFKM&linkCode=as2&tag=robinwu-23)
