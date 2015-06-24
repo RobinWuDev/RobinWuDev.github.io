@@ -3,7 +3,7 @@ layout: post
 title: "2013年书单"
 date: 2013-03-31 19:07:42 +0800
 comments: true
-categories: books
+categories: 书单
 ---
 ###技术类
 1. [软件架构师的12项修炼](http://www.amazon.cn/gp/product/B008407F3S/ref=as_li_ss_tl?ie=UTF8&camp=536&creative=3132&creativeASIN=B008407F3S&linkCode=as2&tag=robinwu-23)
