@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>C++笔记(6) | 肉饼屋</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">C++笔记(6)</h1><a id="logo" href="/.">肉饼屋</a><p class="description">完成阅读，深度思考！</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">C++笔记(6)</h1><div class="post-meta">Jan 9, 2015<span> | </span><span class="category"><a href="/categories/C/">C++</a></span></div><a data-thread-key="2015/01/09/c-plus-plus-bi-ji-6/" href="/2015/01/09/c-plus-plus-bi-ji-6/#comments" class="ds-thread-count"></a><div class="post-content"><p>这两章都是跟其他语言差不多的，除了显式转换，不过那个也可以用其他语言转换的方式，只是比较危险，不过一般用的时候注意下就行<br><a id="more"></a></p>
+<p>###表达式</p>
+<ol>
+<li>当运算符作用于类类型的运算对象时，用户可以自行定义其含义。这种做法被成为重载运算符，在重载运算符中，运算符的类型和返回值的类型可以自定义，但是运算对象、优先级、和结合律是无法改变的。</li>
+<li>当一个对象被用作右值的时候，用的是对象的值（内容），当对象被用作左值的时候，用的是对象的身份（在内存中的位置）</li>
+<li>使用decltype的时候，如果表达式的求值结果是左值，decltype将得到一个引用类型，记住是表达式</li>
+<li>其他的运算符没什么吐槽的，就那些，不过<code>sizeof</code>是一个很少见的运算符，他返回一条表达式或一个类型名字所占的字节数,对于数组来说，他会返回整个数组所占空间的大小，对于string和vector则会返回该类型固定部分的大小</li>
+</ol>
+<p>###显式转换</p>
+<ol>
+<li>一个命名的强制类型转换具有如下形式:<code>const-name&lt;type&gt;(expression)</code></li>
+<li>const-name包括了<code>static_cast</code>,<code>dynamic_cast</code>,<code>const_cast</code>和<code>reinterpret_cast</code></li>
+<li><code>static_cast</code>用于对任何具有明确定义的类型转换，只要不包含底层const。例如将<code>double slope=static_cast&lt;double&gt;(j)</code></li>
+<li><code>const_cast</code>只能用于对底层const的转换，书上说如果对象是一个常量，再使用<code>const_cast</code>执行写操作就会产生未定义的后果，我测试下，如果是不是常量可以正常修改，不是常量，改了没用，感觉是在转换过程中创建了一个副本</li>
+<li><code>reinterpret_cast</code>是进行较低层次的转换，转了之后也不一定能用，所以还是少用这个</li>
+</ol>
+<p>###语句<br>语句这部分也没啥好看，我也是略过去，基本上跟其他语言没啥区别</p>
+<p>###异常</p>
+<ol>
+<li>我发现C++里面似乎没有finally这样的东西，那么怎么在异常发生时，将一些东西关闭掉呢?</li>
+<li><code>exception</code>头文件定义最懂用的异常类<code>exception</code></li>
+<li><code>stdexcept</code>头文件定义了几种常用的异常类</li>
+<li><code>new</code>头文件定义了<code>bad_alloc</code>异常类型</li>
+<li><p><code>type_info</code>定义了<code>bad_cast</code>异常类型</p>
+<ol>
+<li>exception 最常见的问题</li>
+<li>runtime_error 只有在运行时才能检测出的问题</li>
+<li>range_error 运行时错误: 生成的结果超出了有意义的值域范围</li>
+<li>overflow_error 运行时错误: 计算上溢</li>
+<li>underflow_error 运行时错误: 计算下溢</li>
+<li>logic_error 程序逻辑错误</li>
+<li>domain_error 逻辑错误: 参数对应的结果值不存在</li>
+<li>invalid_argument 逻辑错误: 无效参数</li>
+<li>length_error 逻辑错误: 试图创建一个超出该类型最大长度的对象</li>
+<li>out_of_range 逻辑错误: 使用一个超出有效范围的值</li>
+</ol>
+</li>
+</ol>
+<p>部分文字来自<a href="http://www.amazon.cn/gp/product/B00ESUIL0O/ref=as_li_ss_tl?ie=UTF8&amp;camp=536&amp;creative=3132&amp;creativeASIN=B00ESUIL0O&amp;linkCode=as2&amp;tag=robinwu-23" target="_blank" rel="external">《C++ Primer》</a></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://robinwu.com/2015/01/09/c-plus-plus-bi-ji-6/" data-id="citgxtqia002oyz0w0lx14y7t" class="article-share-link">分享到</a><div class="tags"></div><div class="post-nav"><a href="/2015/01/10/c-plus-plus-bi-ji-7/" class="pre">C++笔记(7)</a><a href="/2015/01/08/c-plus-plus-bi-ji-5/" class="next">C++笔记(5)</a></div><div data-thread-key="2015/01/09/c-plus-plus-bi-ji-6/" data-title="C++笔记(6)" data-url="http://robinwu.com/2015/01/09/c-plus-plus-bi-ji-6/" class="ds-share flat"><div class="ds-share-inline"><ul class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0);" class="ds-more">分享到：</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">腾讯微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li></ul><div class="ds-share-icons-more"></div></div></div><div data-thread-key="2015/01/09/c-plus-plus-bi-ji-6/" data-title="C++笔记(6)" data-url="http://robinwu.com/2015/01/09/c-plus-plus-bi-ji-6/" data-author-key="1" class="ds-thread"></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-product-hunt"> 作品</i></div><ul><a href="http://music.robinwu.com" title="Jay的音乐小站" target="_blank">Jay的音乐小站</a></ul><ul><a href="/public" title="公众号-停三秒" target="_blank">公众号-停三秒</a></ul><ul><a href="http://robinwu.com:8080/doc/index.html" title="肉饼屋Api" target="_blank">肉饼屋Api</a></ul><ul><a href="http://robinwu.com:8080/ShareMusic/" title="肉饼屋点歌台" target="_blank">肉饼屋点歌台</a></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/go/">go</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/书单/">书单</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他/">其他</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/感触/">感触</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/收藏/">收藏</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/游记/">游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计划/">计划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/Threejs参数设置/">Threejs参数设置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/10/建立个人门户/">建立个人门户</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/10/从octopress到hexo/">从octopress到hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/zuo-ge-xie-bo-ke-ruan-jian/">做个写博客软件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/14/wo-ceng-jing-ye-xiang-guo-[?]-liao-bai-liao/">我曾经也想过一了百了</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/20/jin-zhang/">紧张</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/04/fu-zao/">浮躁</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/06/24/gitda-bu-ding/">Git打补丁</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/06/20/2015nian-shu-dan/">2015年书单</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/06/20/2014nian-shu-dan/">2014年书单</a></li></ul></div><div class="widget"><div class="comments-title"><i class="fa fa-comment-o"> 最近评论</i></div><div data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-admin="0" data-excerpt-length="32" data-show-title="1" class="ds-recent-comments"></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Powered by <a href="https://hexo.io">hexo</a> | Theme by <a href="https://www.haomwei.com">maupassant</a> | © 2016
+肉饼屋 |  闽ICP备13003171号</div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script>var duoshuoQuery = {short_name:'robinwu'};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

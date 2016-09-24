@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>图片蒙版 | 肉饼屋</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">图片蒙版</h1><a id="logo" href="/.">肉饼屋</a><p class="description">完成阅读，深度思考！</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">图片蒙版</h1><div class="post-meta">Sep 21, 2014<span> | </span><span class="category"><a href="/categories/iOS/">iOS</a></span></div><a data-thread-key="2014/09/21/tu-pian-meng-ban/" href="/2014/09/21/tu-pian-meng-ban/#comments" class="ds-thread-count"></a><div class="post-content"><p>我第一次听到蒙版这个概念是通过ps了解了，通过蒙版，可以让某一张图片只显示我们想要让他显示的形状。<br>在iOS开发中，我们也需要对图片进行各种各样的处理，例如在IM中图片的显示，并不是四四方方的显示出来的，而是显示出一个类似起泡的样子，当然这是因为QQ,微信是这样做的，导致后面的人要做IM的图片也要这样子。<br><a id="more"></a><br>我现在做的一个产品也是需要弄出这样的效果，所以我就研究了下，但是显然这东西并没有我想象的那么简单。首先我知道有三种方法可以实现这样的一种效果。</p>
+<ol>
+<li>通过在图片上面再盖一层图片用来遮盖，但是这种方法有一定的局限性。</li>
+<li>通过图片蒙板生成一个图片，这个方法可行，但是我遇到了另外一个问题。</li>
+<li>通过图层蒙板，使用这个方法需要准备一些东西。</li>
+</ol>
+<p>下面我讲分别说明这三种的使用方法</p>
+<h3 id="1-图片遮盖"><a href="#1-图片遮盖" class="headerlink" title="1. 图片遮盖"></a>1. 图片遮盖</h3><p><img src="/blogFiles/images/2014/09/maskDemo1.png" alt=""></p>
+<p>在原来的图片上面再改一层图片，该图片要显示的部分为透明，不显示的区域颜色要和背景色的颜色保持一直。</p>
+<p><img src="/blogFiles/images/2014/09/maskDemo1_1.png" alt="">  </p>
+<p>这个方法很常用，但是在IM中却不能使用，因为IM的背景图片是可替换的，如果换成一个不纯色的背景图片，那么这个方法就无法使用了。    </p>
+<p>demo的下载地址:<a href="/blogFiles/download/20140921_1.zip">MaskDemo1</a></p>
+<h3 id="2-图片蒙板"><a href="#2-图片蒙板" class="headerlink" title="2. 图片蒙板"></a>2. 图片蒙板</h3><p>通过<strong>CoreGraphics</strong>提供的图片处理函数，我们可以生成一张蒙版处理后的图片。</p>
+<pre><code>- (CGImageRef)rbCopyImageAndAddAlphaChannel:(CGImageRef)sourceImage {
+    CGImageRef retVal = NULL;
+
+    size_t width = CGImageGetWidth(sourceImage);
+    size_t height = CGImageGetHeight(sourceImage);
+
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+
+    CGContextRef offscreenContext = CGBitmapContextCreate(NULL, width, height,
+                                                          8, 0, colorSpace, kCGImageAlphaPremultipliedFirst);
+
+    if (offscreenContext != NULL)
+    {
+        CGContextDrawImage(offscreenContext, CGRectMake(0, 0, width, height), sourceImage);
+        retVal = CGBitmapContextCreateImage(offscreenContext);
+        CGContextRelease(offscreenContext);
+    }
+
+    CGColorSpaceRelease(colorSpace);
+
+    return retVal;
+}
+
+- (UIImage*)rbMaskWithImage:(UIImage *)maskImage{
+    //创建蒙版图片
+    CGImageRef maskRef = maskImage.CGImage;
+    CGImageRef mask = CGImageMaskCreate(CGImageGetWidth(maskRef),
+                                        CGImageGetHeight(maskRef),
+                                        CGImageGetBitsPerComponent(maskRef),
+                                        CGImageGetBitsPerPixel(maskRef),
+                                        CGImageGetBytesPerRow(maskRef),
+                                        CGImageGetDataProvider(maskRef), NULL, false);
+
+
+    CGImageRef sourceImage = [self CGImage];
+    CGImageRef imageWithAlpha = sourceImage;
+
+    //处理原图片，原图片需要有透明通道，如果没有需要处理(例如，gif,jpg等等)
+    //这里有一定的性能消耗
+    if (CGImageGetAlphaInfo(sourceImage) == kCGImageAlphaNone){
+        imageWithAlpha = [self rbCopyImageAndAddAlphaChannel:sourceImage];
+    }
+
+    //创建蒙版处理后的图片
+    CGImageRef masked = CGImageCreateWithMask(imageWithAlpha, mask);
+    CGImageRelease(mask);
+
+    //release imageWithAlpha if it was created by CopyImageAndAddAlphaChannel
+    if (sourceImage != imageWithAlpha)
+    {
+        CGImageRelease(imageWithAlpha);
+    }
+
+    UIImage* retImage = [UIImage imageWithCGImage:masked];
+    CGImageRelease(masked);
+
+    return retImage;
+}
+</code></pre><p>通过上面的方法，我们可以生成一张图片，具体使用如下</p>
+<pre><code>- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    UIImage *image = [UIImage imageNamed:@&quot;demo&quot;];
+    UIImage *maskImage = [UIImage imageNamed:@&quot;mask&quot;];
+    UIImage *maskedImage = [image rbMaskWithImage:maskImage];
+    self.demoImageView.image = maskedImage;
+}
+</code></pre><p>出来的效果:</p>
+<p><img src="/blogFiles/images/2014/09/maskDemo2_1.png" alt=""></p>
+<p>有人可能会疑问，明显变形了，因为用这个方法生成，蒙版图片必须要和原图片一样大小，而我使用的是一张小图片，有设置了拉伸区域，但是并没有生效。</p>
+<p>demo的下载地址:<a href="/blogFiles/download/20140921_2.zip">MaskDemo2</a></p>
+<h3 id="3-使用图层蒙版"><a href="#3-使用图层蒙版" class="headerlink" title="3. 使用图层蒙版"></a>3. 使用图层蒙版</h3><p>设置view.layer.mask为一张蒙版图片，那么图层的内容也会变成相应的形状，例如:</p>
+<pre><code>- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    UIImage *image = [UIImage imageNamed:@&quot;mask&quot;];
+
+    CALayer *layer = [CALayer layer];
+    layer.contents = (id)[image CGImage];
+    layer.contentsCenter = CGRectMake(image.capInsets.left/image.size.width, image.capInsets.top/image.size.height, (image.size.width-image.capInsets.right-image.capInsets.left)/image.size.width, (image.size.height-image.capInsets.bottom-image.capInsets.top)/image.size.height);
+    layer.frame = CGRectMake(0, 0, self.demoImageView.frame.size.width, self.demoImageView.frame.size.height);
+    layer.contentsScale = [UIScreen mainScreen].scale;
+
+    self.demoImageView.layer.mask = layer;
+    self.demoImageView.layer.masksToBounds = YES;
+}
+</code></pre><p>出来的效果:</p>
+<p><img src="/blogFiles/images/2014/09/maskDemo3_1.png" alt=""></p>
+<ol>
+<li>mask图片黑色部分为显示区域</li>
+<li><code>layer.contentsCenter</code>设置的是蒙版图片的拉伸区域在图片的区域比,这个是这个方法的价值所在，蒙版图片自动变大</li>
+<li><code>layer.contentsScale = [UIScreen mainScreen].scale;</code>如果没有设置这个，图片讲采用一倍图，在retina屏幕上不能看</li>
+</ol>
+<p>demo的下载地址:<a href="/blogFiles/download/20140921_3.zip">MaskDemo3</a></p>
+<p>参考:<a href="http://blog.sina.com.cn/s/blog_611f76750101er4z.html" target="_blank" rel="external">UIImage 和 CALayer 的遮罩</a></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://robinwu.com/2014/09/21/tu-pian-meng-ban/" data-id="citgxtqhw0022yz0w7whsboiq" class="article-share-link">分享到</a><div class="tags"></div><div class="post-nav"><a href="/2014/10/05/guo-qing-de-ji-mo/" class="pre">国庆的寂寞</a><a href="/2014/09/08/liang-nian-ji-hua/" class="next">两年计划</a></div><div data-thread-key="2014/09/21/tu-pian-meng-ban/" data-title="图片蒙版" data-url="http://robinwu.com/2014/09/21/tu-pian-meng-ban/" class="ds-share flat"><div class="ds-share-inline"><ul class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0);" class="ds-more">分享到：</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">腾讯微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li></ul><div class="ds-share-icons-more"></div></div></div><div data-thread-key="2014/09/21/tu-pian-meng-ban/" data-title="图片蒙版" data-url="http://robinwu.com/2014/09/21/tu-pian-meng-ban/" data-author-key="1" class="ds-thread"></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-product-hunt"> 作品</i></div><ul><a href="http://music.robinwu.com" title="Jay的音乐小站" target="_blank">Jay的音乐小站</a></ul><ul><a href="/public" title="公众号-停三秒" target="_blank">公众号-停三秒</a></ul><ul><a href="http://robinwu.com:8080/doc/index.html" title="肉饼屋Api" target="_blank">肉饼屋Api</a></ul><ul><a href="http://robinwu.com:8080/ShareMusic/" title="肉饼屋点歌台" target="_blank">肉饼屋点歌台</a></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/go/">go</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/书单/">书单</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他/">其他</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/感触/">感触</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/收藏/">收藏</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/游记/">游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/计划/">计划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/24/Threejs参数设置/">Threejs参数设置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/10/建立个人门户/">建立个人门户</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/10/从octopress到hexo/">从octopress到hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/zuo-ge-xie-bo-ke-ruan-jian/">做个写博客软件</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/14/wo-ceng-jing-ye-xiang-guo-[?]-liao-bai-liao/">我曾经也想过一了百了</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/20/jin-zhang/">紧张</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/07/04/fu-zao/">浮躁</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/06/24/gitda-bu-ding/">Git打补丁</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/06/20/2015nian-shu-dan/">2015年书单</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/06/20/2014nian-shu-dan/">2014年书单</a></li></ul></div><div class="widget"><div class="comments-title"><i class="fa fa-comment-o"> 最近评论</i></div><div data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-admin="0" data-excerpt-length="32" data-show-title="1" class="ds-recent-comments"></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Powered by <a href="https://hexo.io">hexo</a> | Theme by <a href="https://www.haomwei.com">maupassant</a> | © 2016
+肉饼屋 |  闽ICP备13003171号</div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script>var duoshuoQuery = {short_name:'robinwu'};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
