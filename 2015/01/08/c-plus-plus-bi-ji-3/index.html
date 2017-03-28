@@ -1,16 +1,13 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>C++笔记(3) | 肉饼屋</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">C++笔记(3)</h1><a id="logo" href="/.">肉饼屋</a><p class="description">完成阅读，深度思考！</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">C++笔记(3)</h1><div class="post-meta">Jan 8, 2015<span> | </span><span class="category"><a href="/categories/C/">C++</a></span></div><a data-thread-key="2015/01/08/c-plus-plus-bi-ji-3/" href="/2015/01/08/c-plus-plus-bi-ji-3/#comments" class="ds-thread-count"></a><div class="post-content"><p>弄个变量类别，C++能遇到的坑都比别人多<br><a id="more"></a></p>
-<p>###类型别名</p>
-<ol>
+<h3 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h3><ol>
 <li>还是那句话C++做什么事情都可以很多方法，连类型别名也是。<br><code>typedef int wage;``using wage = int</code></li>
 <li>在使用类型别名进行声明，不要尝试用原定义替换，例如<code>typedef char *pstring;const pstring cstr=0;</code>,cstr是个指向char的常量指针。如果用原定义替换就是<code>const char *cstr</code>那么cstr就是一个指向<code>const char</code>的指针</li>
 </ol>
-<p>###auto类型说明符</p>
-<ol>
+<h3 id="auto类型说明符"><a href="#auto类型说明符" class="headerlink" title="auto类型说明符"></a>auto类型说明符</h3><ol>
 <li>使用<code>auto</code>可以让编译器来推算变量的类型，但前提是变量有初始值，我想这个功能类似于一些动态语言的类型推算，只是auto依赖的是编译器</li>
 <li>使用<code>auto</code>推算类型，会把<code>顶层const</code>忽略掉，所以如果要定义则需要手动添加<code>const auto</code></li>
 </ol>
-<p>###decltype类型指示符</p>
-<ol>
+<h3 id="decltype类型指示符"><a href="#decltype类型指示符" class="headerlink" title="decltype类型指示符"></a>decltype类型指示符</h3><ol>
 <li>decltype的功能跟上面的那个很像，但是差别在于不需要用表达式来初始化</li>
 <li>decltype不会去对变量的类型进行处理，例如不忽略顶层const和引用</li>
 <li><p>decltype使用变量，如果在变量上加括号得到的将是不一样的结果，因为加了括号，decltype就把变量认为是表达式，那么变量是一种可以作为赋值语句左值的特殊表达式，所以就会得到引用，例如<code>decltype(i)和decltype((i))</code>是不一样。</p>

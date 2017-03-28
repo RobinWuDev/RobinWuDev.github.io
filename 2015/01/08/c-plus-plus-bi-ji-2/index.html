@@ -1,28 +1,23 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>C++笔记(2) | 肉饼屋</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">C++笔记(2)</h1><a id="logo" href="/.">肉饼屋</a><p class="description">完成阅读，深度思考！</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">C++笔记(2)</h1><div class="post-meta">Jan 8, 2015<span> | </span><span class="category"><a href="/categories/C/">C++</a></span></div><a data-thread-key="2015/01/08/c-plus-plus-bi-ji-2/" href="/2015/01/08/c-plus-plus-bi-ji-2/#comments" class="ds-thread-count"></a><div class="post-content"><p>这次学习的是const,C++是一种很坑爹的东西，连const都能玩出这么多的花样。<br><a id="more"></a></p>
-<p>###const 限定符</p>
-<ol>
+<h3 id="const-限定符"><a href="#const-限定符" class="headerlink" title="const 限定符"></a>const 限定符</h3><ol>
 <li>const的对象一旦被创建后，其值就不能再改变，所以const对象必须初始化，似乎所有的创建后就不能改变的东西(为什么说东西而不是对象，因为引用不是对象)，例如引用</li>
 <li>const的对象是一个有原则的对象，只要不让改变其自身，就和其他对象没啥差别，我们是不是应该把const的对象成为老顽固，因为老顽固一般不会去改变自身</li>
 <li>因为每个文件都需要自己的const对象，而且显然这些文件可能由不同的人来写，那么const的命名上很有可能会冲突，所以const对象的作用域在文件。但如果想要多个文件共用一个const对象，那么就需要使用<code>extern</code>,这里的共用是说不需要<code>include</code>对应的文件，也能获取到对应的值。</li>
 </ol>
-<p>###const的引用</p>
-<ol>
+<h3 id="const的引用"><a href="#const的引用" class="headerlink" title="const的引用"></a>const的引用</h3><ol>
 <li>显然const对象是一个对象，所以可以创建const对象的引用，但是const对象的引用是不可修改。</li>
 <li>需要常量引用绑定一个非常量的对象、表达式，因为对于编译器来说，会先将非常量转成常量，这是会生成一个临时量，再将临时量赋值给常量引用，这是常量引用绑定的是临时量，跟原来的非常量没啥关系。所以需要注意的是这种做法是语法上过得去，但是没用，谁会去绑定一个临时量。</li>
 </ol>
-<p>###指针和const</p>
-<ol>
+<h3 id="指针和const"><a href="#指针和const" class="headerlink" title="指针和const"></a>指针和const</h3><ol>
 <li>指向常量的指针，应该说指针认为自己是指向常量，所以他认为他自己不可以被修改，但是至于他指向的是不是常量，就不一定了。</li>
 <li>常量指针，必须初始化，因为就想上面说的，一旦被初始化，就不能在指向其他的对象。至于能不能通过常量指针修改对象取决于被指向的对象。</li>
 </ol>
-<p>###顶层const 和 底层const</p>
-<ol>
+<h3 id="顶层const-和-底层const"><a href="#顶层const-和-底层const" class="headerlink" title="顶层const 和 底层const"></a>顶层const 和 底层const</h3><ol>
 <li>因为指针本身是个对象，所以他可以被定义成const，这个const被称作顶层const,而他又可以指向对象，被指向的对象也可被定义为const,这个const被称作底层const。</li>
 <li>顶层const并不只是针对指针，而是针对对象，因为任何一个对象都可以被定义为const，而底层const则只针对引用和指针</li>
 <li>顶层const对象只要不改变自身，没什么限制。但是底层const进行拷贝操作时，就必须和自己同样的类型或者可以被转换,所谓的转换也只是针对非常量转换成常量，但是基本类型还是需要一致的。</li>
 </ol>
-<p>###常量表达式和constexpr</p>
-<ol>
+<h3 id="常量表达式和constexpr"><a href="#常量表达式和constexpr" class="headerlink" title="常量表达式和constexpr"></a>常量表达式和constexpr</h3><ol>
 <li>常量表达式是指不会改变并且在编译过程就能得到计算结果的表达式。。我已经有点受够C++的一大串的术语。</li>
 <li>可能是某些地方需要用到常量表达式，所以这时候就需要去确定某个表达式是不是常量表达式，人工判断有点坑，所以就需要<code>constexpr</code>来判断，如果不是编译过不了</li>
 <li>字面值类型指的就是那些简单的类型，算数类型，引用，指针。</li>

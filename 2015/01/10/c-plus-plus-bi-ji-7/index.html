@@ -1,6 +1,5 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>C++笔记(7) | 肉饼屋</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">C++笔记(7)</h1><a id="logo" href="/.">肉饼屋</a><p class="description">完成阅读，深度思考！</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">C++笔记(7)</h1><div class="post-meta">Jan 10, 2015<span> | </span><span class="category"><a href="/categories/C/">C++</a></span></div><a data-thread-key="2015/01/10/c-plus-plus-bi-ji-7/" href="/2015/01/10/c-plus-plus-bi-ji-7/#comments" class="ds-thread-count"></a><div class="post-content"><p>函数这章的东西真的很多，而且很多东西也是一知半解，还是需要用，不过先知道下，真的用的时候，如果有问题再看<br><a id="more"></a></p>
-<p>###函数</p>
-<ol>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ol>
 <li>形参列表中的形参用逗号隔开，每个形参都需要含有一个声明符的声明，即使形参的类型一样，也必须要把两个类型分开，在其他一些语言中，是不需要两个类型都写的，但是看声明的时候也很不清晰</li>
 <li>函数的返回类型不能是数组类型或者是函数类型，但可以是指向数组或者函数的指针</li>
 <li>我们把只存在于块执行期间的对象成为自动对象，就是自动创建，自动销毁</li>
@@ -24,8 +23,7 @@
 <li>给<code>initializer_list</code>形参中传递一个值的序列，则必须把序列放在一对花括号内</li>
 <li>可以用<code>...</code>省略符来定义，不过是为了访问一些C标准库而设置的</li>
 </ol>
-<p>###返回类型和return语句</p>
-<ol>
+<h3 id="返回类型和return语句"><a href="#返回类型和return语句" class="headerlink" title="返回类型和return语句"></a>返回类型和return语句</h3><ol>
 <li>返回值返回的是一个临时副本，如果是引用也有可能是临时对象的引用，这是要注意，如果是临时对象，函数执行完他就要被干掉了，这时如果使用改引用会出问题的，所以不要返回局部变量的的引用或指针</li>
 <li><p>定义一个返回数组指针的函数比较麻烦，使用类型别名比较简单</p>
 <pre><code>typedef int arrT[10];
@@ -35,8 +33,7 @@ arrT* func(int i);
 </li>
 <li>C++11新标准中还有一种可以简化声明的方法，就是尾置返回类型，任何函数的定义都能使用尾置返回，尾置返回类型跟在形参列表后面并以一个<code>-&gt;</code>符号开头，例如:<code>auto func(int i) -&gt; int(*)[10]</code></li>
 </ol>
-<p>###函数重载</p>
-<ol>
+<h3 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h3><ol>
 <li>如果同一作用域内的几个函数名字相同但形参列表不同，我们称之为重载函数</li>
 <li><code>main</code>函数不能重载</li>
 <li>对于重载的函数来说，他们应该在形参数量或形参类型上有所不同</li>
@@ -51,8 +48,7 @@ arrT* func(int i);
 </li>
 <li>在C++语言中，名字查找发生在类型检查之前</li>
 </ol>
-<p>###特殊用途语言特性（默认实参，内联函数，constexpr）</p>
-<ol>
+<h3 id="特殊用途语言特性（默认实参，内联函数，constexpr）"><a href="#特殊用途语言特性（默认实参，内联函数，constexpr）" class="headerlink" title="特殊用途语言特性（默认实参，内联函数，constexpr）"></a>特殊用途语言特性（默认实参，内联函数，constexpr）</h3><ol>
 <li>默认形参，在定义中给每个形参设置默认值，不过一旦某个形参被赋予了默认值，它后面的所有形参必须有默认值</li>
 <li>在给定的作用域中一个形参只能被赋予一次默认实参</li>
 <li>通常，应该在函数声明中指定默认实参，并将该声明放在合适的头文件中</li>
@@ -67,7 +63,7 @@ arrT* func(int i);
 <li><code>constexpr</code>函数是值能用于常量表达式的函数,该函数的返回类型以及所有形参的类型都得是字面值类型</li>
 <li>内联函数和<code>constexpr</code>函数一般放在头文件</li>
 </ol>
-<p>###NDEBUG预处理变量<br>编译器定义了几个调使用的名字    </p>
+<h3 id="NDEBUG预处理变量"><a href="#NDEBUG预处理变量" class="headerlink" title="NDEBUG预处理变量"></a>NDEBUG预处理变量</h3><p>编译器定义了几个调使用的名字    </p>
 <ol>
 <li><code>__func__</code> 输出当前调试的函数的名字</li>
 <li><code>__FILE__</code> 存放文件名的字符串字面值</li>
@@ -75,8 +71,7 @@ arrT* func(int i);
 <li><code>__TIME__</code> 存放文件编译时间的字符串字面值</li>
 <li><code>__DATE__</code> 存放文件编译日期的字符串字面值</li>
 </ol>
-<p>###函数指针</p>
-<ol>
+<h3 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h3><ol>
 <li>函数指针指向的是函数而非对象</li>
 <li>想要声明一个可以指向该函数的指针，只需要用指针替换函数名即可</li>
 <li>我们可以直接使用函数指针，而无需提前解引用指针</li>

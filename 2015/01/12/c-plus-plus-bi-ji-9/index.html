@@ -1,6 +1,5 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>C++笔记(9) | 肉饼屋</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">C++笔记(9)</h1><a id="logo" href="/.">肉饼屋</a><p class="description">完成阅读，深度思考！</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">C++笔记(9)</h1><div class="post-meta">Jan 12, 2015<span> | </span><span class="category"><a href="/categories/C/">C++</a></span></div><a data-thread-key="2015/01/12/c-plus-plus-bi-ji-9/" href="/2015/01/12/c-plus-plus-bi-ji-9/#comments" class="ds-thread-count"></a><div class="post-content"><p>这次是一些标准库的使用<br><a id="more"></a></p>
-<p>###IO库</p>
-<ol>
+<h3 id="IO库"><a href="#IO库" class="headerlink" title="IO库"></a>IO库</h3><ol>
 <li>不能拷贝或对IO类赋值</li>
 <li>可以是用<code>endl</code>来刷新缓冲区</li>
 <li>使用<code>unitbuf</code>来设置接下来的每一次输出都刷新缓冲区，使用<code>nounitbuf</code>恢复到正常状态</li>
@@ -17,8 +16,7 @@
 </ol>
 </li>
 </ol>
-<p>###顺序容器</p>
-<ol>
+<h3 id="顺序容器"><a href="#顺序容器" class="headerlink" title="顺序容器"></a>顺序容器</h3><ol>
 <li><p>顺序容器类型</p>
 <ol>
 <li>vector 可变大小数组。支持快速随机访问。在尾部之外的位置插入或删除元素可能很慢</li>
@@ -34,8 +32,7 @@
 <li>向一个vector,string或deque插入元素会使所有指向容器的迭代器、引用和指针失效。</li>
 <li>将一个元素放进一个容器，事实上是放入他的拷贝进去</li>
 </ol>
-<p>###泛型算法</p>
-<ol>
+<h3 id="泛型算法"><a href="#泛型算法" class="headerlink" title="泛型算法"></a>泛型算法</h3><ol>
 <li>算法不依赖于容器，但是依赖于容器内的类型</li>
 <li>除了少数算法外，标准库算法都对一个范围内的元素进行操作</li>
 <li>那些只接受一个单一迭代器来表示第二个序列的算法，都假定第二个序列至少与第一个序列一样长</li>
